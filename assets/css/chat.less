@@ -1,0 +1,50 @@
+@import '~assets/css/variables.less';
+@import '~assets/css/mixins.less';
+
+.b-modal-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: rgba(0, 0, 0, .4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.b-modal {
+		padding: 15px;
+		.white-box();
+		width: 80%;
+		> div {
+			margin-bottom: 10px;
+		}
+		.e-header {
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+		.b-buttons {
+			margin-bottom: 0;
+			display: flex;
+			justify-content: flex-end;
+			.b-button {
+				.tg-button()
+			}
+		}
+		.c-radio-btn {
+			.b-icon {
+				i {
+					font-size: 1.3em;
+					color: rgb(195, 195, 195);
+				}
+			}
+			&.m-checked {
+				.b-icon {
+					i {
+						color: @basic-blue;
+					}
+				}
+			}
+		}
+	}
+}

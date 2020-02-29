@@ -1,0 +1,254 @@
+@import "variables";
+@import "mixins";
+@import "animation";
+
+html {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	word-spacing: 1px;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+	overflow-y: auto;
+	cursor: default;
+}
+
+input, textarea, select {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+[contenteditable] {
+	cursor: text;
+}
+
+[contenteditable=false] {
+	cursor: default;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.v-cloak {
+  display: none;
+}
+
+.app-navbar {
+	background: #fafafa;
+	border: none;
+	box-shadow: 0 1px 1px #7c7c7c;
+	text-align: right;
+	padding-right: 20px;
+	height: @navbar-height;
+	position: fixed;
+	width: 100%;
+	z-index: 1001;
+
+	.c-language-selector {
+		font-size: .8em;
+		color: #636363;
+		height: 46px;
+		text-transform: uppercase;
+
+		&:hover {
+			.e-title {
+				color: @menu-red;
+			}
+		}
+
+		& > .b-trigger {
+			padding: 5px 15px !important;
+		}
+	}
+}
+
+.app-quwi {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 28px;
+	color: #000;
+	font-weight: bold;
+	font-family: Google Sans,sans-serif;
+	@logo-margin: 2px;
+	width: @navbar-height - @logo-margin;
+	height: @navbar-height - @logo-margin;
+	margin-left: (@projects-bar-width - @navbar-height + @logo-margin) / 2;
+	margin-right: (@projects-bar-width - @navbar-height + @logo-margin) / 2;
+	margin-top: @logo-margin / 2;
+	border-radius: 50%;
+	.expand-hover();
+	&:hover {
+		text-decoration: none;
+	}
+	&:before {
+		width: @navbar-height - @logo-margin;
+		height: @navbar-height - @logo-margin;
+	}
+}
+
+section#content { padding-top: @navbar-height; }
+
+.btn{
+	height: @btn-height;
+	padding: 0 15px;
+	text-transform: uppercase;
+	font-size: 11px;
+	color: white;
+  	font-weight: bold;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	background: @dark-blue;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	outline: none;
+  &:hover {
+    opacity: .7;
+    text-decoration: none;
+  }
+  &.btn-light-grey {
+    color: #000;
+    background-color: #cecece !important;
+    border: #bebebe solid 1px !important;
+    text-shadow: 1px 1px 0px #ccc !important;
+    &:hover {
+      background: #dedede !important;
+    }
+  }
+  &.btn-primary{
+    /*color: #fff;*/
+    color: @blue-color;
+    background-color: #2e6da4;
+    border-color: #2e6da4;
+    text-shadow: 1px 1px 0px #000;
+    &:hover {
+      background: #3e7db4;
+    }
+  }
+	> i, .loader {
+		display: none;
+	}
+	&.m-loading {
+		opacity: 0.8;
+		cursor: default;
+		i, .loader {
+			display: block;
+		}
+		> span {
+			display: none;
+		}
+	}
+}
+
+
+textarea {
+	font-family: inherit;
+	vertical-align: top !important;
+}
+
+.float {
+  float: left;
+  width: 100%;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+input[type=text], input[type=password], textarea {
+  &::-webkit-input-placeholder {
+    color: @placeholder-color;
+  }
+  &::-moz-placeholder {
+    color: @placeholder-color;
+  }
+  &:-ms-input-placeholder {
+    color: @placeholder-color;
+  }
+  &:-moz-placeholder {
+    color: @placeholder-color;
+  }
+	&.placeholder-italic {
+		&::-webkit-input-placeholder {
+			font-style: italic;
+		}
+		&::-moz-placeholder {
+			font-style: italic;
+		}
+		&:-ms-input-placeholder {
+			font-style: italic;
+		}
+		&:-moz-placeholder {
+			font-style: italic;
+		}
+	}
+}
+
+.app-form {
+  //@height: 32px;
+  @padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: @padding;
+  color: black;
+	background: white;
+	.white-box();
+  input[type=text], input[type=password] {
+	 .text-input();
+    &.error {
+      border-color: @red-color;
+    }
+  }
+  .b-title {
+    margin: -@padding -@padding @padding -@padding;
+    height: 40px;
+    line-height: 40px;
+    background: #989898;
+    font-weight: bold;
+    padding: 0 @padding;
+  }
+  .b-dropdown {
+    display: inline-block;
+    margin-top: 8px;
+  }
+  label {
+    //position: relative;
+    display: inline-block;
+    padding: 9px 0;
+  }
+}
+
+.m-turn-right {
+	transform: rotate(90deg);
+}
+
+.m-turn-left {
+	transform: rotate(-90deg);
+}
+
+.e-underline {
+	text-decoration: underline;
+}
+
+i.bu-bell.m-crossed {
+	position: relative;
+	&:after {
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0%;
+		content: '';
+		transform: rotate(135deg) translateX(35%);
+		border-left: 0.08em solid;
+	}
+}

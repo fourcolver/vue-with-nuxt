@@ -1,0 +1,5 @@
+node_modules
+dist
+static/OneSignalSDKUpdaterWorker.js
+static/OneSignalSDKWorker.js
+libs/vuejs-datepicker

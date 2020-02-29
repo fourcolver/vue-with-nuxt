@@ -1,0 +1,13 @@
+{
+  "name": "burger-socket",
+  "version": "1.0.0",
+  "description": "socket.io for burger",
+  "dependencies": {
+    "axios": "~0.18.0",
+    "dotenv": "~6.0.0",
+    "express": "~4.16.3",
+    "jsonwebtoken": "~8.2.1",
+    "socket.io": "~2.1.0",
+    "winston": "~3.0.0"
+  }
+}

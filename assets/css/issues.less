@@ -1,0 +1,74 @@
+.b-issues-list {
+	width: @issues-width;
+	margin: auto;
+	margin-bottom: 80px;
+	&.hide {
+		display: none;
+	}
+	&.loading {
+		opacity: .5;
+		pointer-events: none;
+		/*.c-issue, .b-priority-header {*/
+		/*visibility: hidden;*/
+		/*}*/
+	}
+	.b-priority-block {
+		margin-bottom: 25px;
+		.b-priority-header {
+			.c-priority-label {
+				margin-right: 12px;
+			}
+			.e-cnt {
+				color: #000 !important;
+				font-weight: normal !important;
+			}
+		}
+	}
+	.b-pager {
+		margin: 20px 0;
+		&:after {
+			.after-clearfix();
+		}
+		a {
+			background-color: #fff;
+			border: 1px solid #ddd;
+			position: relative;
+			float: left;
+			padding: 6px 0;
+			text-align: center;
+			margin-left: -1px;
+			color: #636363;
+			width: 35px;
+			&.m-active, &:hover {
+				text-decoration: none;
+				background: rgba(99, 99, 99, 0.7);
+				color: #fff;
+				border-color: transparent;
+			}
+		}
+	}
+
+	.b-footer-row {
+		display: flex;
+		.b-left {
+			flex: 1;
+			display: flex;
+		}
+		.b-right {
+			display: flex;
+		}
+	}
+
+	.b-empty {
+		text-align: center;
+		margin-bottom: 30px;
+		.b-reset {
+			margin-top: 5px;
+			color: @blue-color;
+			cursor: pointer;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

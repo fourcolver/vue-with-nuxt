@@ -1,0 +1,29 @@
+@keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+
+.m-spin {
+	-webkit-animation: spin 2s infinite linear;
+	animation: spin 2s infinite linear;
+}
+
+/* .page-enter-active, .page-leave-active {
+  transition: opacity .1s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+} */
+
+.fade-default-enter-active, .fade-default-leave-active {
+  transition: opacity .5s;
+}
+.fade-default-enter, .fade-default-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+}

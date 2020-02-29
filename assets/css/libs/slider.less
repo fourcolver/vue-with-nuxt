@@ -1,0 +1,25 @@
+@import '../../../node_modules/vue-range-slider/dist/vue-range-slider.css';
+
+.range-slider {
+	height: 12px;
+	background: #414141;
+	border-radius: 10px;
+	padding: 0;
+	input {
+		display: none !important;
+	}
+}
+
+.range-slider-inner {
+	display: block;
+	margin: 0 auto;
+	width: calc(100% ~'-' 12px);
+	.range-slider-rail, .range-slider-fill {
+		background: transparent;
+	}
+	.range-slider-knob {
+		background: #ececec;
+		width: 8px;
+		height: 8px;
+	}
+}

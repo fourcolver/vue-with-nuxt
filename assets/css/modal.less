@@ -1,0 +1,56 @@
+@import '~assets/css/mixins.less';
+@import '~assets/css/variables.less';
+
+.m-modal {
+	.fullscreen-modal();
+	width: 100%;
+	@btn-height: 38px;
+	color: #fff;
+	.b-top {
+		padding-top: @navbar-height - @btn-height;
+	}
+	.b-top, .b-bottom {
+		height: @btn-height;
+		display: flex;
+		align-items: center;
+		> .b-left {
+			flex: 1;
+			.b-info {
+				font-size: .9em;
+				margin-left: 10px;
+				.e-file {
+					margin-bottom: 3px;
+				}
+			}
+		}
+		> .b-left, > .b-right {
+			height: 100%;
+			display: flex;
+		}
+		> .b-right {
+			margin-right: 10px;
+		}
+		.m-button {
+			width: 38px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			&.e-download {
+				font-size: 1.5em;
+			}
+			&:hover {
+				background: rgba(0, 0, 0, .9);
+			}
+		}
+	}
+	.b-main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		video, img {
+			max-width: calc(100vw ~'-' 20px);
+			max-height: calc(100vh ~'-' @btn-height ~'-' @navbar-height);
+		}
+	}
+}

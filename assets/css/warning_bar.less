@@ -1,0 +1,44 @@
+.m-warning-bar {
+	@height: 48px;
+	.b-row {
+		height: @height;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		position: relative;
+		font-size: .9em;
+		display: flex;
+		&.m-warning {
+			background: #df7f2c;
+		}
+		&.m-alert {
+			background: #de2f2f;
+		}
+		&.slide-enter {
+			margin-top: -@height;
+		}
+		&.slide-enter-active {
+			transition: margin-top linear 1s;
+		}
+	}
+	.e-close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: @height;
+		width: @height;
+		font-size: 1.3em;
+		cursor: pointer;
+		&:hover {
+			background: rgba(255, 255, 255, .3);
+		}
+	}
+	a {
+		color: #fff;
+		text-decoration: underline;
+		margin: 0 5px;
+	}
+}

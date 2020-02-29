@@ -1,0 +1,93 @@
+{
+  "name": "quwi",
+  "version": "1.0.1",
+  "description": "Quwi",
+  "author": "Udimicom, Limited",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "fontello": "node build-fontello.js",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .eslintignore .",
+    "precommit": "npm run lint",
+    "test": "ava"
+  },
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": 3000
+    }
+  },
+  "dependencies": {
+    "@nuxtjs/google-analytics": "~2.0.2",
+    "@nuxtjs/onesignal": "~2.6.0",
+    "@nuxtjs/pwa": "~2.6.0",
+    "axios": "~0.17.1",
+    "child_process": "~1.0.2",
+    "cookie-universal-nuxt": "~1.0.16",
+    "dotenv": "~4.0.0",
+    "http-proxy-agent": "~2.1.0",
+    "https-proxy-agent": "~2.2.1",
+    "js-cookie": "~2.2.0",
+    "jsonp": "~0.2.1",
+    "lodash": "~4.17.11",
+    "mobile-detect": "~1.4.3",
+    "moment": "~2.22.2",
+    "net": "~1.0.2",
+    "npm": "~6.4.1",
+    "nuxt": "~1.4.4",
+    "nuxtjs-dotenv-module": "~1.0.0",
+    "quwi-editor": "git+ssh://git@gitquwieditor:Udimicom/quwi-editor.git",
+    "v-tooltip": "~2.0.0-rc.33",
+    "vue": "2.5.17",
+    "vue-clipboard2": "~0.3.0",
+    "vue-context-menu": "~2.0.6",
+    "vue-drag-drop": "~0.2.4",
+    "vue-flag-icon": "~1.0.6",
+    "vue-i18n": "~7.8.1",
+    "vue-infinite-scroll": "~2.0.2",
+    "vue-notification": "~1.3.13",
+    "vue-range-slider": "~0.6.0",
+    "vue-server-renderer": "2.5.17",
+    "vue-socket.io": "~2.1.1",
+    "vue-template-compiler": "2.5.17",
+    "vuebar": "0.0.20",
+    "vuedraggable": "~2.16.0",
+    "vuejs-datepicker": "~1.5.4",
+    "vuex-persistedstate": "~2.5.4"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.25",
+    "ava": "^0.25.0",
+    "babel-eslint": "~7.2.3",
+    "browser-env": "^3.2.5",
+    "eslint": "~4.19.1",
+    "eslint-config-standard": "~10.2.1",
+    "eslint-loader": "~1.9.0",
+    "eslint-plugin-html": "~3.2.2",
+    "eslint-plugin-import": "~2.14.0",
+    "eslint-plugin-node": "~5.2.1",
+    "eslint-plugin-promise": "~3.8.0",
+    "eslint-plugin-standard": "~3.1.0",
+    "fontello-webpack-plugin": "~0.4.8",
+    "less": "~2.7.3",
+    "less-loader": "~4.1.0",
+    "require-extension-hooks": "^0.3.3",
+    "require-extension-hooks-babel": "^0.1.1",
+    "require-extension-hooks-vue": "^1.1.0",
+    "thenby": "^1.3.0",
+    "vuejs-paginator": "~2.0.2"
+  },
+  "ava": {
+    "require": [
+      "babel-register",
+      "./tests/setup.js"
+    ],
+    "files": [
+      "./tests/specs/*.js"
+    ],
+    "snapshotDir": "./tests/snapshots"
+  }
+}

@@ -1,0 +1,44 @@
+@import 'variables';
+@import 'mixins';
+
+.container.hide {
+	display: none;
+}
+
+.user-signup {
+	.white-form();
+	width: 440px;
+	margin: 50px auto;
+	form {
+		.c-active-input {
+			margin-bottom: 10px;
+			&.m-domain {
+				.b-input-group {
+					display: flex;
+					.b-label {
+						display: flex;
+						align-items: center;
+						&.m-right {
+              margin-left: 10px;
+						}
+            &.m-left {
+              margin-right: 10px;
+            }
+					}
+				}
+			}
+		}
+		input {
+			.text-input()
+		}
+		> div.b-button {
+			&:after { .after-clearfix; }
+			margin-top: 10px;
+			> div.error {
+				color: @red-color;
+				padding: 0px 0 0 15px;
+				font-size: 12px;
+			}
+		}
+	}
+}

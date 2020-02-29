@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>[{{ status }}] {{ name }}</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name=viewport>
+  <link rel="stylesheet" href="/_nuxt/icons.css">
+  <style>
+    html {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      word-spacing: 1px;
+    }
+    body {
+      background-color: #f4f4f4;
+      margin: 0;
+    }
+    .app-navbar {
+      background: #fafafa;
+      border: none;
+      box-shadow: 0 1px 1px #7c7c7c;
+      text-align: right;
+      padding-right: 20px;
+      height: 46px;
+      position: fixed;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .app-navbar .b-quwi {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      font-size: 28px;
+      color: #000;
+      font-weight: bold;
+      font-family: Google Sans, sans-serif;
+      width: 44px;
+      height: 44px;
+      margin-left: 13px;
+      margin-right: 13px;
+      margin-top: 1px;
+      border-radius: 50%;
+    }
+    .b-container {
+      display:flex;
+      text-align: center;
+      justify-content: center;
+      align-items:center;
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+    }
+    .b-container > div {
+      margin-top: -50px;
+    }
+    .b-container .title {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .b-container .description {
+      font-size: 16px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+<div class="app-layout">
+  <nav class="app-navbar">
+    <a href="/dashboard" class="b-quwi">
+      Q
+    </a>
+  </nav>
+  <div class="b-container">
+    <div>
+      <div class="title">[{{ status }}] {{ name }}</div>
+      <div class="description" style="display: none">{{ message }}</div>
+      <div class="description">The server encountered an internal error or page does not exist</div>
+      <div class="description">Please, <a href="/">click here</a> to return to the home page</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
